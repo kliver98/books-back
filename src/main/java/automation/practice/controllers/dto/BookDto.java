@@ -1,8 +1,5 @@
 package automation.practice.controllers.dto;
 
-import lombok.Getter;
-import lombok.Setter;
-
 public class BookDto {
 
   public BookDto() {
