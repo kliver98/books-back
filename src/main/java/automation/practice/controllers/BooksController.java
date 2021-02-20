@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
 @RequestMapping("books")
-@CrossOrigin
+@CrossOrigin(origins = {"http://localhost:4200","https://books2testing.herokuapp.com/"})
 public class BooksController {
   public static final String REPEATED_AUTHORS = "Robert C. \"Uncle Bob\" Martin ";
   @GetMapping("")
   public BookDto[] getBooks() {
     
     return new BookDto[] {
-      new BookDto("Patterns of Enterprise Application Architecture", "Martin Fowler"),
+      new BookDto("Patterns of Enterprise Application Architecture - modified", "Martin Fowler"),
       new BookDto("Clean Architecture: A Craftsman's Guide to Software Structure and Design", "Robert C. \"Uncle Bob\" Martin"),
       new BookDto("The Art of Computer Programming", "Donald Knuth "),
       new BookDto("CODE: The Hidden Language of Computer Hardware and Software", "Charles Petzold "),
