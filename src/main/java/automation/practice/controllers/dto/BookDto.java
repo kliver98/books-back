@@ -14,12 +14,8 @@ public class BookDto {
     this.author = author;
   }
 
-  @Getter
-  @Setter
   private String name;
 
-  @Getter
-  @Setter
   private String author;
 
 	public String getName() {
