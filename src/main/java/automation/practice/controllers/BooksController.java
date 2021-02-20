@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
 @RequestMapping("books")
-@CrossOrigin(origins = {"http://localhost:4200","https://books2testing.herokuapp.com/"})
+@CrossOrigin(origins = {"http://localhost:4200","https://books2testing.herokuapp.com"})
 public class BooksController {
   public static final String REPEATED_AUTHORS = "Robert C. \"Uncle Bob\" Martin ";
   @GetMapping("")
