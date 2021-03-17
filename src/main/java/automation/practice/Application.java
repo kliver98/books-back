@@ -13,8 +13,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class Application {
-  @Value("${ALLOWED_ORIGINS:http://localhost:4200,https://books2testing.herokuapp.com}")
-  private String allowedOrigins;
+  @Value("${ALLOWED_ORIGINS:http://localhost:4200}")
+  private String devUrl;
+  
+  @Value("${ALLOWED_ORIGINS:https://books2testing.herokuapp.com}")
+  private String prodUrl;
 
   public static void main(String[] args) {
     SpringApplication.run(Application.class, args);
@@ -40,7 +43,7 @@ public class Application {
       public void addCorsMappings(CorsRegistry registry) {
         registry
           .addMapping("/**")
-          .allowedOrigins(allowedOrigins)
+          .allowedOrigins(devUrl,prodUrl)
           .allowedMethods("*");
       }
     };
