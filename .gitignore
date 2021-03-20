@@ -1,3 +1,6 @@
+**/bin
+.vscode/
+*.class
 # Created by https://www.toptal.com/developers/gitignore/api/intellij,gradle,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij,gradle,macos
 
@@ -149,5 +152,3 @@ gradle-app.setting
 generated
 
 .idea
-
-/bin/
