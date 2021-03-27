@@ -19,6 +19,9 @@ public class Application {
   @Value("${ALLOWED_ORIGINS:https://books2testing.herokuapp.com}")
   private String prodUrl;
 
+  @Value("${ALLOWED_ORIGINS:https://books2testing-qa.herokuapp.com}")
+  private String qaUrl;
+
   public static void main(String[] args) {
     SpringApplication.run(Application.class, args);
   }
@@ -43,7 +46,7 @@ public class Application {
       public void addCorsMappings(CorsRegistry registry) {
         registry
           .addMapping("/**")
-          .allowedOrigins(devUrl,prodUrl)
+          .allowedOrigins(devUrl,prodUrl,qaUrl)
           .allowedMethods("*");
       }
     };
